@@ -4,7 +4,7 @@
   "description": "Pilot Academy workshops - React",
   "main": "src/app.jsx",
   "scripts": {
-    "start": "http-server dist --silent",
+    "start": "http-server -p 3001 dist --silent",
     "watch": "npm start & watchify . -o dist/app.js --verbose --debug --extension .jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
