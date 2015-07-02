@@ -2,7 +2,7 @@
   "name": "react_workshop",
   "version": "1.0.0",
   "description": "Pilot Academy workshops - React",
-  "main": "src/app.js",
+  "main": "src/app.jsx",
   "scripts": {
     "start": "http-server dist --silent",
     "watch": "npm start & watchify . -o dist/app.js --verbose --debug --extension .jsx",
@@ -12,9 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "browserify": "^10.2.4",
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1"
   },
   "devDependencies": {
     "watchify": "^3.2.3"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
   }
 }
