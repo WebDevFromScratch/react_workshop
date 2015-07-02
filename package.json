@@ -5,11 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "http-server dist --silent",
+    "watch": "npm start & watchify . -o dist/app.js --verbose --debug --extension .jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Piotr Klosinski",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^0.8.0"
+    "browserify": "^10.2.4",
+    "http-server": "^0.8.0",
+    "watchify": "^3.2.3"
   }
 }
