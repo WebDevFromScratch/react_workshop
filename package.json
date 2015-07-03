@@ -8,7 +8,7 @@
   },
   "main": "src/app.jsx",
   "scripts": {
-    "start": "http-server -p 3001 dist --silent",
+    "start": "http-server dist --silent",
     "watch": "npm start & watchify . -o dist/app.js --verbose --debug --extension .jsx",
     "postinstall": "browserify . -o dist/app.js --verbose --debug --extension .jsx"
   },
