@@ -23,19 +23,13 @@ var StoriesList = React.createClass({
   render: function() {
     var stories = this.state.stories;
     return(
-      <div className='storiesList'>
-        <Bootstrap.Badge>hi!</Bootstrap.Badge>
-
-        <ul>
-          {stories.map(function(story) {
-            return(
-              <li key={story.id}>
-                <Story title={story.title} url={story.url} />
-              </li>
-            )
-          })}
-        </ul>
-      </div>
+      <Bootstrap.ListGroup className='storiesList'>
+        {stories.map(function(story) {
+          return(
+            <Story key={story.id} title={story.title} url={story.url} />
+          )
+        })}
+      </Bootstrap.ListGroup>
     )
   }
 });

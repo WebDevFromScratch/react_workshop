@@ -1,16 +1,13 @@
 var $ = require('jquery');
 var React = require('react');
+var Bootstrap = require('react-bootstrap');
 
 var Story = React.createClass({
   render: function() {
     return(
-      <div className='story'>
-        <h2>
-          {this.props.title}
-        </h2>
-        {this.props.url}
-        <hr/>
-      </div>
+      <Bootstrap.ListGroupItem className='story' header={this.props.title}>
+        <a href={this.props.url}>{this.props.url}</a>
+      </Bootstrap.ListGroupItem>
     )
   }
 });
