@@ -2,10 +2,15 @@
   "name": "react_workshop",
   "version": "1.0.0",
   "description": "Pilot Academy workshops - React",
+  "engines": {
+    "node": "0.12.2",
+    "npm": "2.7.4"
+  },
   "main": "src/app.jsx",
   "scripts": {
     "start": "http-server -p 3001 dist --silent",
     "watch": "npm start & watchify . -o dist/app.js --verbose --debug --extension .jsx",
+    "postinstall": "npm start & browserify . -o dist/app.js --verbose --debug --extension .jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Piotr Klosinski",
