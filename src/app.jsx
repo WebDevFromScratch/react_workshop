@@ -24,13 +24,16 @@ var Recent = React.createClass({
 });
 
 var App = React.createClass({
+  mixins: [ Router.State ],
+
   render: function() {
+    var activeKey = this.getPathname();
     return (
       <div>
         <Bootstrap.Navbar brand='React Workshop'>
-          <Bootstrap.Nav>
-            <Bootstrap.NavItem eventKey={1} href='#/popular' source='https://fierce-gorge-1132.herokuapp.com/stories'>Popular</Bootstrap.NavItem>
-            <Bootstrap.NavItem eventKey={2} href='#/recent' source='https://fierce-gorge-1132.herokuapp.com/recent'>Recent</Bootstrap.NavItem>
+          <Bootstrap.Nav activeKey={activeKey}>
+            <Bootstrap.NavItem eventKey={'/popular'} href='#/popular' source='https://fierce-gorge-1132.herokuapp.com/stories'>Popular</Bootstrap.NavItem>
+            <Bootstrap.NavItem eventKey={'/recent'} href='#/recent' source='https://fierce-gorge-1132.herokuapp.com/recent'>Recent</Bootstrap.NavItem>
           </Bootstrap.Nav>
         </Bootstrap.Navbar>
 
