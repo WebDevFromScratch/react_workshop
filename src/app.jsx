@@ -52,9 +52,10 @@ var App = React.createClass({
 });
 
 var routes = (
-  <Route handler={App}>
-    <Route path='popular' handler={Popular} />
-    <Route path='recent' handler={Recent} />
+  <Route name='/' handler={App}>
+    <Route name='popular' handler={Popular} />
+    <Route name='recent' handler={Recent} />
+    <Router.Redirect from='/' to='popular' />
   </Route>
 );
 
