@@ -33,11 +33,16 @@ var App = React.createClass({
             <Bootstrap.NavItem eventKey={2} href='#/recent' source='https://fierce-gorge-1132.herokuapp.com/recent'>Recent</Bootstrap.NavItem>
           </Bootstrap.Nav>
         </Bootstrap.Navbar>
-        <div className='storiesContainer'>
-          <h1 className='text-center'>Stories:</h1>
-          <br/>
-          <RouteHandler />
-        </div>
+
+        <Bootstrap.Grid>
+          <Bootstrap.Row className='show-grid'>
+            <Bootstrap.Col xs={12}>
+              <h1 className='text-center'>Stories:</h1>
+              <br/>
+              <RouteHandler />
+            </Bootstrap.Col>
+          </Bootstrap.Row>
+        </Bootstrap.Grid>
       </div>
     );
   }

@@ -26,7 +26,7 @@ var StoriesList = React.createClass({
       <Bootstrap.ListGroup className='storiesList'>
         {stories.map(function(story) {
           return(
-            <Story key={story.id} title={story.title} url={story.url} />
+            <Story key={story.id} title={story.title} url={story.url} score={story.score} />
           )
         })}
       </Bootstrap.ListGroup>

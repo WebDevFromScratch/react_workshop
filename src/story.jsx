@@ -7,6 +7,7 @@ var Story = React.createClass({
     return(
       <Bootstrap.ListGroupItem className='story' header={this.props.title}>
         <a href={this.props.url}>{this.props.url}</a>
+        <Bootstrap.Badge pullRight>{this.props.score}</Bootstrap.Badge>
       </Bootstrap.ListGroupItem>
     )
   }
